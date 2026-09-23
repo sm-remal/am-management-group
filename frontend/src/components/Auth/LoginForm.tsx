@@ -454,7 +454,7 @@ const LoginForm: React.FC = () => {
             {/* Footer */}
             <div className="mt-8 text-center">
               <p className="text-[10px] text-slate-400">
-                Â© {new Date().getFullYear()} AM Management Group Sdn. Bhd. All
+                &copy; {new Date().getFullYear()} AM Management Group Sdn. Bhd. All
                 rights reserved.
               </p>
             </div>
