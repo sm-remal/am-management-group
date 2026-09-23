@@ -1,0 +1,22 @@
+# Local PostgreSQL for AM Management Group
+#   docker compose up -d db
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: am_user
+      POSTGRES_PASSWORD: am_secret
+      POSTGRES_DB: am_management
+    ports:
+      - "5432:5432"
+    volumes:
+      - am_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U am_user -d am_management"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  am_pgdata:

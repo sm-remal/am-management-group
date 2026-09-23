@@ -1,0 +1,308 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id          String    @id @default(uuid())
+  name        String
+  email       String    @unique
+  password    String
+  role        Role      @default(USER)
+  avatar      String?
+  isActive    Boolean   @default(true)
+  lastLoginAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  phone       String?
+  newsPosts   News[]
+
+  @@map("users")
+}
+
+model Company {
+  id                      String           @id @default(uuid())
+  name                    String
+  slug                    String           @unique
+  category                BusinessCategory
+  isMainCompany           Boolean          @default(false)
+  shortDescription        String?          @db.VarChar(500)
+  description             String?          @db.Text
+  logo                    String?
+  coverImage              String?
+  registrationNumber      String?
+  establishedDate         DateTime?
+  address                 String?          @db.Text
+  phone                   String?
+  email                   String?
+  businessHours           String?          @db.Text
+  seoTitle                String?
+  seoDescription          String?          @db.Text
+  displayOrder            Int              @default(0)
+  status                  PublishStatus    @default(DRAFT)
+  createdAt               DateTime         @default(now())
+  updatedAt               DateTime         @updatedAt
+  preferredByApplications Application[]    @relation("PreferredCompany")
+  galleryImages           GalleryImage[]
+  jobs                    Job[]
+  projects                Project[]
+  services                Service[]
+  socialLinks             SocialLink[]
+  teamMembers             TeamMember[]
+
+  @@index([category])
+  @@map("companies")
+}
+
+model Service {
+  id           String   @id @default(uuid())
+  companyId    String
+  title        String
+  slug         String
+  description  String?  @db.Text
+  icon         String?
+  image        String?
+  displayOrder Int      @default(0)
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  company      Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, slug])
+  @@map("services")
+}
+
+model Project {
+  id            String           @id @default(uuid())
+  name          String
+  slug          String           @unique
+  companyId     String
+  category      BusinessCategory
+  location      String?
+  clientName    String?
+  description   String?          @db.Text
+  scope         String?          @db.Text
+  startDate     DateTime?
+  endDate       DateTime?
+  status        ProjectStatus    @default(UPCOMING)
+  featured      Boolean          @default(false)
+  coverImage    String?
+  publishStatus PublishStatus    @default(DRAFT)
+  displayOrder  Int              @default(0)
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+  highlights    String?          @db.Text
+  images        ProjectImage[]
+  company       Company          @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([category, status])
+  @@index([companyId], map: "idx_projects_companyId")
+  @@map("projects")
+}
+
+model ProjectImage {
+  id        String   @id @default(uuid())
+  projectId String
+  imageUrl  String
+  caption   String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId], map: "idx_project_images_projectId")
+  @@map("project_images")
+}
+
+model News {
+  id          String        @id @default(uuid())
+  title       String
+  slug        String        @unique
+  excerpt     String?       @db.VarChar(500)
+  content     String        @db.Text
+  coverImage  String?
+  category    String?
+  authorId    String?
+  status      PublishStatus @default(DRAFT)
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  author      User?         @relation(fields: [authorId], references: [id])
+
+  @@index([authorId], map: "idx_news_authorId")
+  @@map("news")
+}
+
+model Job {
+  id             String         @id @default(uuid())
+  title          String
+  slug           String         @unique
+  companyId      String
+  location       String?
+  employmentType EmploymentType @default(FULL_TIME)
+  requirements   String?        @db.Text
+  description    String?        @db.Text
+  salaryInfo     String?
+  deadline       DateTime?
+  isPublished    Boolean        @default(false)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  applications   Application[]
+  company        Company        @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId, isPublished])
+  @@map("jobs")
+}
+
+model Application {
+  id                 String            @id @default(uuid())
+  jobId              String
+  fullName           String
+  email              String
+  phone              String
+  preferredCompanyId String?
+  cvUrl              String
+  coverMessage       String?           @db.Text
+  status             ApplicationStatus @default(PENDING)
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+  job                Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  preferredCompany   Company?          @relation("PreferredCompany", fields: [preferredCompanyId], references: [id])
+
+  @@index([status])
+  @@index([jobId], map: "idx_applications_jobId")
+  @@index([preferredCompanyId], map: "idx_applications_preferredCompanyId")
+  @@map("applications")
+}
+
+model GalleryImage {
+  id           String   @id @default(uuid())
+  title        String?
+  imageUrl     String
+  category     String
+  companyId    String?
+  displayOrder Int      @default(0)
+  isPublished  Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  company      Company? @relation(fields: [companyId], references: [id])
+
+  @@index([category])
+  @@index([companyId], map: "idx_gallery_companyId")
+  @@map("gallery")
+}
+
+model Inquiry {
+  id        String        @id @default(uuid())
+  name      String
+  email     String
+  phone     String
+  company   String?
+  subject   String
+  message   String        @db.Text
+  status    InquiryStatus @default(NEW)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@map("inquiries")
+}
+
+model TeamMember {
+  id           String   @id @default(uuid())
+  name         String
+  position     String
+  photo        String?
+  bio          String?  @db.Text
+  companyId    String?
+  displayOrder Int      @default(0)
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  company      Company? @relation(fields: [companyId], references: [id])
+
+  @@index([companyId], map: "idx_team_members_companyId")
+  @@map("team_members")
+}
+
+model SocialLink {
+  id        String         @id @default(uuid())
+  companyId String?
+  platform  SocialPlatform
+  url       String
+  order     Int            @default(0)
+  createdAt DateTime       @default(now())
+  company   Company?       @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId], map: "idx_social_links_companyId")
+  @@map("social_links")
+}
+
+model Setting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String   @db.Text
+  updatedAt DateTime @updatedAt
+
+  @@map("settings")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum BusinessCategory {
+  MANAGEMENT_INVESTMENT
+  CLEANING_SERVICES
+  ENGINEERING_MACHINERY
+  PLANTATION_AGRICULTURE
+  RETAIL_TRADING
+  TRAVEL_TOURISM
+}
+
+enum PublishStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ProjectStatus {
+  UPCOMING
+  ONGOING
+  COMPLETED
+}
+
+enum EmploymentType {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+  INTERNSHIP
+}
+
+enum ApplicationStatus {
+  PENDING
+  REVIEWED
+  SHORTLISTED
+  REJECTED
+  HIRED
+}
+
+enum InquiryStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+  ARCHIVED
+}
+
+enum SocialPlatform {
+  FACEBOOK
+  INSTAGRAM
+  LINKEDIN
+  TIKTOK
+  YOUTUBE
+  TWITTER_X
+  WHATSAPP
+  OTHER
+}

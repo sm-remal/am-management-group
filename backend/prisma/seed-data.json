@@ -1,0 +1,423 @@
+{
+  "settings": {
+    "site.name": "AM Management Group",
+    "site.tagline": "One Group. Multiple Businesses.",
+    "site.description": "AM Management Group - Empowering growth through diversified operations in construction, engineering, plantation, retail, and travel services.",
+    "site.business_hours": "Monday - Friday: 8:30 AM - 5:30 PM\nSaturday: 8:30 AM - 1:00 PM",
+    "contact.phone": "+60 16-860 0084",
+    "contact.whatsapp": "60168600084",
+    "contact.email": "info@ammanagement.com.my",
+    "contact.address": "No 387-O/1 (1st Floor), Jalan Melor Utama, Taman Peringgit Jaya, 75400 Melaka, Malaysia",
+    "seo.title": "AM Management Group Sdn. Bhd.",
+    "seo.description": "Malaysian business group established in 2012. CIDB Grade G5 contractor with companies in machinery, cleaning services, plantation, mini market retail and travel ticketing.",
+    "contact.email_alt": "ammanagement2012@gmail.com"
+  },
+  "companies": [
+    {
+      "slug": "am-management-group",
+      "name": "AM Management Group Sdn. Bhd.",
+      "category": "MANAGEMENT_INVESTMENT",
+      "isMainCompany": true,
+      "displayOrder": 1,
+      "shortDescription": "The group's holding company and a CIDB Grade G5 construction contractor, established in Melaka in 2012.",
+      "description": "Established in 2012, AM Management Group Sdn. Bhd. is a Malaysian construction and property company delivering residential, commercial, industrial and infrastructure works.\n\nThe company combines technical skill, practical project management and a strong focus on safety, quality and client satisfaction. It also manages and invests in the group's five operating companies.",
+      "registrationNumber": "201201041345 (1025823-K)",
+      "establishedDate": "2012-11-27",
+      "address": "No 387-O/1 (1st Floor), Jalan Melor Utama, Taman Peringgit Jaya, 75400 Melaka, Malaysia",
+      "phone": "+60 16-860 0084",
+      "email": "info@ammanagement.com.my",
+      "businessHours": "Monday - Friday: 8:30 AM - 5:30 PM\nSaturday: 8:30 AM - 1:00 PM",
+      "coverImage": "/images/office/hq-exterior.jpg",
+      "services": [
+        [
+          "Residential Housing Construction",
+          "Single and double-storey houses, including Bina Rumah Atas Tanah (BRAT) programmes."
+        ],
+        [
+          "Shop-Office & Commercial Buildings",
+          "Two-storey shop-offices and multi-storey office buildings."
+        ],
+        [
+          "Civil & Drainage Works",
+          "Drainage, earthworks and supporting infrastructure."
+        ],
+        [
+          "Brickwork, Plastering & Skim Coat",
+          "Finishing trades delivered by our own site teams."
+        ],
+        [
+          "Project & Site Management",
+          "Planning, supervision, safety and handover."
+        ]
+      ]
+    },
+    {
+      "slug": "hidensypro",
+      "name": "Hidensypro Sdn. Bhd.",
+      "category": "ENGINEERING_MACHINERY",
+      "displayOrder": 2,
+      "shortDescription": "Machinery and engineering support for construction and industrial sites.",
+      "description": "Hidensypro Sdn. Bhd. is the group's machinery and engineering company. It supports construction and industrial projects with equipment, technical operations and maintenance.",
+      "services": [
+        [
+          "Machinery Rental",
+          "Construction and site equipment on hire."
+        ],
+        [
+          "Equipment Supply",
+          "Sourcing of machinery and parts."
+        ],
+        [
+          "Technical & Maintenance Support",
+          "Servicing and on-site technical operations."
+        ]
+      ]
+    },
+    {
+      "slug": "bm-magnitude-services",
+      "name": "BM Magnitude Services",
+      "category": "CLEANING_SERVICES",
+      "displayOrder": 3,
+      "shortDescription": "Professional cleaning and facility support for commercial and construction sites.",
+      "description": "BM Magnitude Services provides cleaning and facility support for offices, commercial premises and completed construction projects.",
+      "services": [
+        [
+          "Commercial Cleaning",
+          "Scheduled cleaning for offices and commercial premises."
+        ],
+        [
+          "Post-Construction Cleaning",
+          "Handover-ready cleaning for new buildings."
+        ],
+        [
+          "Facility Maintenance Support",
+          "Routine upkeep and site maintenance."
+        ]
+      ]
+    },
+    {
+      "slug": "cm-plantation-services",
+      "name": "CM Plantation Services",
+      "category": "PLANTATION_AGRICULTURE",
+      "displayOrder": 4,
+      "shortDescription": "Plantation management and agricultural services focused on sustainable growth.",
+      "description": "CM Plantation Services manages plantation operations and provides field workforce and agricultural support services.",
+      "services": [
+        [
+          "Plantation Management",
+          "Day-to-day management of plantation land."
+        ],
+        [
+          "Field Workforce Services",
+          "Skilled and general field workers."
+        ],
+        [
+          "Agricultural Support",
+          "Upkeep, harvesting support and land preparation."
+        ]
+      ]
+    },
+    {
+      "slug": "am-multi-trade-empire",
+      "name": "AM Multi Trade Empire",
+      "category": "RETAIL_TRADING",
+      "displayOrder": 5,
+      "shortDescription": "Mini market retail and daily essential goods for local communities.",
+      "description": "AM Multi Trade Empire operates the group's mini market business, supplying daily essentials and household goods to local communities.",
+      "services": [
+        [
+          "Mini Market",
+          "Groceries, household items and daily essentials."
+        ],
+        [
+          "Daily Essentials Supply",
+          "Reliable stock of fast-moving consumer goods."
+        ],
+        [
+          "Trading",
+          "Wholesale and trading of consumer products."
+        ]
+      ]
+    },
+    {
+      "slug": "ma-travel-and-tour",
+      "name": "MA Travel and Tour Sdn. Bhd.",
+      "category": "TRAVEL_TOURISM",
+      "displayOrder": 6,
+      "shortDescription": "Airline ticketing, corporate travel booking and tour packages.",
+      "description": "MA Travel and Tour Sdn. Bhd. handles airline ticketing and travel arrangements for corporate and private customers.",
+      "services": [
+        [
+          "Airline Ticketing",
+          "Domestic and international flight tickets."
+        ],
+        [
+          "Corporate Travel Booking",
+          "Travel arrangements for companies and teams."
+        ],
+        [
+          "Tour Packages",
+          "Custom holiday and tour packages."
+        ]
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "brat-housing-programme-visi-lagenda",
+      "name": "BRAT Housing Programme for Visi Lagenda Sdn Bhd",
+      "status": "COMPLETED",
+      "featured": true,
+      "displayOrder": 1,
+      "clientName": "Visi Lagenda Sdn Bhd",
+      "location": "Negeri Sembilan & Melaka",
+      "startDate": "2023-06-25",
+      "endDate": "2025-06-25",
+      "description": "Construction of single-storey houses under the Pembangunan Perumahan Bina Rumah Atas Tanah (BRAT) programme, delivered across multiple sites in Negeri Sembilan and Melaka. Contract value RM 1,019,200.",
+      "scope": "Taman Hilsa, Port Dickson\nPadang Nyamok\nKampung Serkam, Melaka\nLenggong Ulu, Negeri Sembilan\nBukit Serindit, Melaka\nKuala Pilah, Negeri Sembilan\nPulau Gadong, Melaka\nPantai Siring",
+      "highlights": "Contract value RM 1,019,200\nCompleted June 2025\nMulti-site delivery across two states",
+      "coverImage": "/images/projects/brat-pantai-siring-3.jpg",
+      "images": [
+        [
+          "brat-pantai-siring-3.jpg",
+          "Pantai Siring"
+        ],
+        [
+          "brat-pulau-gadong-front.jpg",
+          "Pulau Gadong"
+        ],
+        [
+          "brat-kuala-pilah-team.jpg",
+          "Site team, Kuala Pilah"
+        ]
+      ]
+    },
+    {
+      "slug": "housing-and-shop-office-programme-melaka",
+      "name": "Housing & Shop-Office Development Programme, Melaka",
+      "status": "ONGOING",
+      "featured": true,
+      "displayOrder": 2,
+      "location": "Melaka",
+      "startDate": "2025-07-01",
+      "endDate": "2026-01-31",
+      "description": "Housing and shop/office development works at four Melaka locations. Contract value RM 1,641,000.",
+      "scope": "Taman Kota Laksamana, Melaka\nMelekek, Alor Gajah\nAnjung Gapam, Bemban\nBachang, Melaka",
+      "highlights": "Contract value RM 1,641,000\nStarted July 2025\nFour sites in Melaka",
+      "coverImage": "/images/projects/shop-office-programme-2.jpg",
+      "images": [
+        [
+          "shop-office-programme-2.jpg",
+          "Shop-office blocks"
+        ]
+      ]
+    },
+    {
+      "slug": "double-storey-terrace-sungai-petai",
+      "name": "Double-Storey Terrace Houses, Sungai Petai",
+      "status": "COMPLETED",
+      "featured": true,
+      "displayOrder": 3,
+      "location": "Sungai Petai, Alor Gajah, Melaka",
+      "description": "Construction of double-storey terrace houses in Sungai Petai, Alor Gajah.",
+      "coverImage": "/images/projects/sungai-petai-terrace-2.jpg",
+      "images": [
+        [
+          "sungai-petai-terrace-2.jpg",
+          "Completed unit"
+        ]
+      ]
+    },
+    {
+      "slug": "two-storey-shop-offices-kota-syahbandar",
+      "name": "Two-Storey Shop-Offices, Kota Syahbandar",
+      "status": "COMPLETED",
+      "featured": true,
+      "displayOrder": 4,
+      "location": "Kota Syahbandar, Melaka",
+      "description": "Construction of two-storey shop-office blocks in Kota Syahbandar, Melaka.",
+      "coverImage": "/images/projects/kota-syahbandar-2.jpg",
+      "images": [
+        [
+          "kota-syahbandar-2.jpg",
+          "Aerial view"
+        ]
+      ]
+    },
+    {
+      "slug": "single-storey-terrace-melekek",
+      "name": "Single-Storey Terrace Houses, Melekek",
+      "status": "COMPLETED",
+      "featured": true,
+      "displayOrder": 5,
+      "location": "Melekek, Alor Gajah, Melaka",
+      "description": "Construction of single-storey terrace houses in Melekek, Alor Gajah.",
+      "coverImage": "/images/projects/melekek-terrace-2.jpg",
+      "images": [
+        [
+          "melekek-terrace-2.jpg",
+          "Terrace units"
+        ]
+      ]
+    },
+    {
+      "slug": "drainage-works-bahau",
+      "name": "Drainage Works, Bahau",
+      "status": "COMPLETED",
+      "featured": true,
+      "displayOrder": 6,
+      "location": "Bahau, Negeri Sembilan",
+      "description": "Construction of concrete drainage in Bahau, Negeri Sembilan.",
+      "coverImage": "/images/projects/bahau-drainage.jpg",
+      "images": [
+        [
+          "bahau-drainage.jpg",
+          "Concrete drain"
+        ]
+      ]
+    },
+    {
+      "slug": "five-storey-office-paya-rumput",
+      "name": "Five-Storey Office Building, Paya Rumput",
+      "status": "COMPLETED",
+      "featured": false,
+      "displayOrder": 7,
+      "location": "Paya Rumput, Melaka",
+      "description": "Construction of a five-storey office building in Paya Rumput, Melaka.",
+      "images": []
+    }
+  ],
+  "gallery": [
+    [
+      "brat-pantai-siring-3.jpg",
+      "Completed house, Pantai Siring",
+      "Completed Projects"
+    ],
+    [
+      "kota-syahbandar-2.jpg",
+      "Shop-offices, Kota Syahbandar",
+      "Construction"
+    ],
+    [
+      "brat-kuala-pilah-team.jpg",
+      "Site team, Kuala Pilah",
+      "Our People"
+    ],
+    [
+      "sungai-petai-terrace-2.jpg",
+      "Terrace houses, Sungai Petai",
+      "Completed Projects"
+    ],
+    [
+      "shop-office-programme-2.jpg",
+      "Shop-office programme, Melaka",
+      "Construction"
+    ],
+    [
+      "../office/hq-exterior.jpg",
+      "Head office, Melaka",
+      "Office"
+    ]
+  ],
+  "news": [
+    {
+      "slug": "brat-housing-programme-completed",
+      "title": "BRAT housing programme for Visi Lagenda completed",
+      "category": "Projects",
+      "publishedAt": "2025-06-25",
+      "excerpt": "AM Management Group has completed its Bina Rumah Atas Tanah programme across sites in Negeri Sembilan and Melaka.",
+      "content": "AM Management Group has completed the Pembangunan Perumahan Bina Rumah Atas Tanah (BRAT) programme for Visi Lagenda Sdn Bhd.\n\nThe contract, valued at RM 1,019,200, ran from June 2023 to June 2025 and covered sites including Taman Hilsa in Port Dickson, Lenggong Ulu, Kuala Pilah, Pulau Gadong and Pantai Siring.",
+      "coverImage": "/images/projects/brat-pulau-gadong-front.jpg"
+    },
+    {
+      "slug": "housing-and-shop-office-programme-begins",
+      "title": "Housing and shop-office programme under way in Melaka",
+      "category": "Projects",
+      "publishedAt": "2025-07-01",
+      "excerpt": "Works have started on a RM 1.64 million housing and shop/office programme at four Melaka locations.",
+      "content": "AM Management Group has started a housing and shop/office development programme valued at RM 1,641,000.\n\nWorks cover Taman Kota Laksamana, Melekek in Alor Gajah, Anjung Gapam in Bemban, and Bachang.",
+      "coverImage": "/images/projects/shop-office-programme-2.jpg"
+    },
+    {
+      "slug": "cidb-g5-registration-renewed",
+      "title": "CIDB Grade G5 registration renewed to 2027",
+      "category": "Corporate",
+      "publishedAt": "2024-07-14",
+      "excerpt": "The company's CIDB registration at Grade G5 is valid until June 2027.",
+      "content": "AM Management Group's registration with the Construction Industry Development Board (CIDB) has been renewed at Grade G5 in categories B, CE and ME, effective 14 July 2024 and valid until 21 June 2027.",
+      "coverImage": "/images/office/hq-exterior.jpg"
+    }
+  ],
+  "jobs": [
+    {
+      "slug": "construction-site-supervisor",
+      "title": "Construction Site Supervisor",
+      "company": "am-management-group",
+      "location": "Melaka",
+      "employmentType": "FULL_TIME",
+      "description": "Supervise daily site activities, manpower and subcontractors on our residential and shop-office projects.",
+      "requirements": "Diploma in construction or civil engineering, or equivalent experience\nAt least 3 years of site experience\nGood knowledge of site safety\nWilling to travel between Melaka and Negeri Sembilan sites"
+    },
+    {
+      "slug": "cleaning-operations-supervisor",
+      "title": "Cleaning Operations Supervisor",
+      "company": "bm-magnitude-services",
+      "location": "Melaka",
+      "employmentType": "FULL_TIME",
+      "description": "Lead cleaning teams across commercial and post-construction sites.",
+      "requirements": "Experience leading cleaning or facility teams\nAble to plan rosters and check quality\nOwn transport preferred"
+    },
+    {
+      "slug": "machinery-maintenance-technician",
+      "title": "Machinery Maintenance Technician",
+      "company": "hidensypro",
+      "location": "Melaka",
+      "employmentType": "FULL_TIME",
+      "description": "Service and repair construction machinery and site equipment.",
+      "requirements": "Certificate in mechanical or automotive engineering\nHands-on experience with heavy equipment\nAble to work on site"
+    },
+    {
+      "slug": "mini-market-assistant",
+      "title": "Mini Market Assistant",
+      "company": "am-multi-trade-empire",
+      "location": "Melaka",
+      "employmentType": "FULL_TIME",
+      "description": "Serve customers, manage the cashier and keep shelves stocked.",
+      "requirements": "SPM or equivalent\nFriendly and customer-focused\nAble to work shifts, including weekends"
+    }
+  ],
+  "leadership": [
+    [
+      "Rohaidah Binti Buang",
+      "Director"
+    ],
+    [
+      "Dato' Kulwant Singh A/L Sewa Singh",
+      "Executive Director"
+    ],
+    [
+      "Nor Haryati Binti Zahain",
+      "Chief Financial Officer"
+    ],
+    [
+      "Nor Zakiah Binti Abu Bakar",
+      "Administrative Executive"
+    ],
+    [
+      "Marzaidah Binti Mokhtar",
+      "Marketing Executive"
+    ],
+    [
+      "Mohammad Jewel Islam Zoo",
+      "Site Manager"
+    ],
+    [
+      "Rosdee Bin Buang",
+      "Supervisor"
+    ],
+    [
+      "Mohamad Isa Bin Rabbu",
+      "Clerk"
+    ]
+  ]
+}
