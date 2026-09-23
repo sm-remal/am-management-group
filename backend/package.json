@@ -7,10 +7,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src/server.ts",
-    "build": "prisma generate && tsup",
+    "dev": "node api.js && tsx watch ./src/server.ts",
+    "build": "node api.js && prisma generate && tsup",
     "vercel-build": "prisma generate && tsup",
-    "start": "node dist/server.js",
+    "start": "node api.js && node dist/server.js",
     "postinstall": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
